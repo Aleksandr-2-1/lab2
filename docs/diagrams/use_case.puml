@@ -1,0 +1,40 @@
+@startuml
+left to right direction
+
+actor "Специалист по учёту оборудования" as Specialist
+actor "Ответственный сотрудник" as Employee
+
+rectangle "Система учёта оборудования" {
+  usecase "Зарегистрировать\nоборудование" as UC1
+  usecase "Найти оборудование" as UC2
+  usecase "Изменить данные\nоборудования" as UC3
+  usecase "Просмотреть список\nоборудования" as UC4
+  usecase "Закрепить оборудование\nза сотрудником" as UC5
+  usecase "Оформить\nперемещение" as UC6
+  usecase "Изменить состояние\nоборудования" as UC7
+  usecase "Провести\nинвентаризацию" as UC8
+  usecase "Оформить\nсписание" as UC9
+  usecase "Сформировать\nотчёт" as UC10
+
+  usecase "Просмотреть закреплённое\nоборудование" as UC11
+  usecase "Подтвердить получение\nоборудования" as UC12
+  usecase "Сообщить о\nнеисправности" as UC13
+  usecase "Оформить возврат\nоборудования" as UC14
+}
+
+Specialist --> UC1
+Specialist --> UC2
+Specialist --> UC3
+Specialist --> UC4
+Specialist --> UC5
+Specialist --> UC6
+Specialist --> UC7
+Specialist --> UC8
+Specialist --> UC9
+Specialist --> UC10
+
+Employee --> UC11
+Employee --> UC12
+Employee --> UC13
+Employee --> UC14
+@enduml
